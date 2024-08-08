@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      host: bytewizard
+      port: 27017
+      database: studentdb
