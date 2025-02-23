@@ -1,17 +1,19 @@
 name: Generate Release Notes
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main  # Change this to your target branch
 
 jobs:
   generate-release-notes:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Generate Release Notes
-        uses: release-drafter/release-drafter@v5
+        uses: probot/adapter-github-actions@v1
         with:
-          config-name: release-drafter.yml
+          token: ${{ s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 }}  # Pass the token here
