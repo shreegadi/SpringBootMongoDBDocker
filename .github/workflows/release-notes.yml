@@ -15,5 +15,4 @@ jobs:
 
       - name: Generate Release Notes
         uses: probot/adapter-github-actions@v1
-        with:
-          token: ${{ s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 }}  # Pass the token here
+       
