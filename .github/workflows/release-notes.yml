@@ -1,0 +1,17 @@
+name: Generate Release Notes
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate Release Notes
+        uses: release-drafter/release-drafter@v5
+        with:
+          config-name: release-drafter.yml
